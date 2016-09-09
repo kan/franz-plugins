@@ -1,5 +1,9 @@
 module.exports = (Franz, options) => {
     function getMessages() {
+        $('.item-box-title h1 a').each((i, e) => {
+            $(e).attr('target', '_blank');
+        });
+
         var unread = 0;
         const flush = $('div.flush-button.active')[0];
         if (flush) {
